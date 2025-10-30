@@ -1,6 +1,6 @@
-cipherKey = ""
+cipherKey = "" #Note: needs to be uppercase. in main file use .upper()
 keyArray = []
-cipherText = ""
+cipherText = "" #Note: needs to be uppercase. in main file use .upper()
 keyLength = len(cipherKey) - 1
 
 if keyLength < 0: # Error handler
@@ -25,5 +25,6 @@ def solver(cipher, key):
         #print(f"Cipher: {s}, Key letter: {key[counter]}, Counter: {counter}")
 
     print(plain)
+
 
 
