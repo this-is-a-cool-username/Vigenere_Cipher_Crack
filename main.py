@@ -50,6 +50,7 @@ def chi_square(text):
     counts = {c: 0 for c in alphabet} # counts how many characters are in the text
     for c in text: # for loop initilizes the frequency table for characters in alphabet
         counts[c] += 1
+    #print(counts)
     chi = 0
     # for loop for chi square method that iterates through A-Z
     for l in alphabet:
@@ -94,7 +95,7 @@ def crack(cipher):
     bestPlaintext = ""
     bestKeyGuess = ""
     bestScore = 1000 # lowest score is most likely the answer
-    for keyLen in range(2, 9): # goes through the the key guesses (if you enable the debug in this function you can see how many keys its goes through)
+    for keyLen in range(2, 10): # goes through the the key guesses (if you enable the debug in this function you can see how many keys its goes through)
                                # if the key is in the range it keeps it
         keyGuess, score = bestKey(cipher, keyLen)
         plain = solver(cipher, keyGuess)
